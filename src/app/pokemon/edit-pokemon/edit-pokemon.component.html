@@ -1,0 +1,40 @@
+<h3>Edit Pokemon</h3>
+    <form (ngSubmit)="save()">
+      <div class="row mb-3">
+        <label for="name" class="col-sm-2 col-form-label">Name</label>
+        <div class="col-sm-4">
+          <input type="text" class="form-control" id="name" name="name" [(ngModel)]="pokemon.name.english">
+        </div>
+      </div>
+      <fieldset class="row mb-3">
+        <legend class="col-form-label col-sm-2 pt-0">POWER</legend>
+        <div class="col">
+          <label for="hp">HP</label>
+          <input type="number" class="form-control" id="hp" name="hp" [(ngModel)]="pokemon.base.HP">
+        </div>
+        <div class="col">
+          <label for="attack">Attack</label>
+          <input type="number" class="form-control" id="attack" name="attack" [(ngModel)]="pokemon.base.Attack">
+        </div>
+        <div class="col">
+          <label for="defense">Defense</label>
+          <input type="number" class="form-control" id="defense" name="defense" [(ngModel)]="pokemon.base.Defense">
+        </div>
+        <div class="col">
+          <label for="sp.attack">SP. Attack</label>
+          <input type="number" class="form-control" id="sp.attack" name="sp.attack" [(ngModel)]="pokemon.base['Sp. Attack']">
+        </div>
+        <div class="col">
+          <label for="sp.defense">Sp. Defense</label>
+          <input type="number" class="form-control" id="sp.defense" name="sp.defense" [(ngModel)]="pokemon.base['Sp. Defense']">
+        </div>
+        <div class="col">
+          <label for="speed">Speed</label>
+          <input type="number" class="form-control" id="speed" name="speed" [(ngModel)]="pokemon.base.Speed">
+        </div>
+  
+  
+      </fieldset>
+      
+      <button type="submit" class="btn btn-primary">Save</button>
+    </form>
